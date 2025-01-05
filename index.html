@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LodCoin Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Registration Page -->
+    <div id="registrationPage" class="page active">
+        <div class="container">
+            <div class="card registration-card">
+                <h2>Welcome to LodCoin</h2>
+                <div class="input-group">
+                    <input type="text" id="telegramUID" placeholder="Enter your Telegram User ID">
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage -->
+    <div id="homePage" class="page">
+        <div class="container">
+            <!-- User Stats Card -->
+            <div class="card stats-card">
+                <div class="stat-item">
+                    <h3>Account UID</h3>
+                    <p id="userUID">-</p>
+                </div>
+                <div class="stat-item">
+                    <h3>LodPoints</h3>
+                    <p id="pointsBalance">0</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Referees</h3>
+                    <p id="refereeCount">0</p>
+                </div>
+            </div>
+
+            <!-- Tasks Card -->
+            <div class="card tasks-card">
+                <h2>Available Tasks</h2>
+                <div id="tasksList">
+                    <!-- Tasks will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Referral Card -->
+            <div class="card referral-card">
+                <h2>Invite Friends</h2>
+                <div class="referral-content">
+                    <input type="text" id="referralLink" readonly>
+                    <button onclick="copyReferralLink()">Copy Link</button>
+                </div>
+                <p class="referral-info">Earn 100 LodPoints for each referral</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Alert -->
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
